@@ -4,8 +4,7 @@ services:
 script:
 - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
 - docker build -t klumhru/golang-compiledaemon:latest .
-- docker tag klumhru/golang-compiledaemon:latest klumhru/golang-compiledaemon:$(git
-  rev-parse --short HEAD)
+- docker tag klumhru/golang-compiledaemon:latest klumhru/golang-compiledaemon:$(git rev-parse --short HEAD)
 - docker push klumhru/golang-compiledaemon:latest
 - docker push klumhru/golang-compiledaemon:$(git rev-parse --short HEAD)
 env:

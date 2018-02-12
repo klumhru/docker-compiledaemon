@@ -8,5 +8,5 @@ Designed and tested on Linux for use with docker compose
 ## Usage
 
 ```bash
-docker run klumhru/golang-compiledaemon -v (your project root):/go/src/(your project path)
+docker run klumhru/golang-compiledaemon -v (your project root):/go/src/(your project path) -w /go/src/(your project path)
 ```
